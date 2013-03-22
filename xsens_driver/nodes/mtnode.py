@@ -122,6 +122,10 @@ class XSensDriver(object):
 		position_data = data.get('Position')
 		rawgps_data = data.get('RAWGPS')
 		status = data.get('Status')	# int
+                sample = data.get('Sample')
+
+                # TODO by @demmeln: use sample counter for timestamp
+                # correction. Watch out for counter wrap.
 
 		# create messages and default values
 		imu_msg = Imu()
